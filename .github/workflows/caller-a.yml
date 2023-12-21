@@ -1,5 +1,9 @@
 name: Caller A
 
+on:
+  push:
+    branches: [ main ]
+
 jobs:
   plan:
     uses: rara-tan/zenn-githubactions-reuse-workflow/.github/workflows/common.yml@main
