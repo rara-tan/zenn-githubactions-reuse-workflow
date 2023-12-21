@@ -1,0 +1,14 @@
+name: Caller 2
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  plan:
+    uses: rara-tan/zenn-githubactions-reuse-workflow/.github/workflows/common.yml@main
+    with:
+      input-a: aa
+      input-b: bb
+    secrets:
+      secret-value: secret!!!

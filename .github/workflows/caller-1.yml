@@ -1,4 +1,4 @@
-name: Caller A
+name: Caller 1
 
 on:
   push:
@@ -8,7 +8,7 @@ jobs:
   plan:
     uses: rara-tan/zenn-githubactions-reuse-workflow/.github/workflows/common.yml@main
     with:
-      input-a: aa
-      input-b: bb
+      input-a: a
+      input-b: b
     secrets:
       secret-value: secret!
