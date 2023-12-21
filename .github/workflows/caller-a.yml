@@ -1,0 +1,13 @@
+name: Caller A
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test
+        uses: rara-tan/zenn-githubactions-reuse-workflow/.github/workflows/common.yml@main
+        with:
+          input-a: aa
+          input-b: bb
+        secrets:
+          secret-value: secret!

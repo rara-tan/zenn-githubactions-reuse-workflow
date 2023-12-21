@@ -1,0 +1,27 @@
+name: Reusable workflow
+
+on:
+  workflow_call:
+    inputs:
+      input-a:
+        required: true
+        type: string
+      input-b:
+        required: false
+        type: string
+    secrets:
+      secret-value:
+        required: true
+
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo input a
+        run: echo ${{ inputs.input-a }}
+
+      - name: echo input b
+        run: echo ${{ inputs.input-b }}
+
+      - name: echo secret value
+        run: echo ${{ secrets.secret-value }}
